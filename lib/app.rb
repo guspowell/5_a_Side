@@ -1,9 +1,10 @@
 class App
 
-  attr_accessor :players, :team_one, :team_two
+  attr_accessor :players, :team_one, :team_two, :available_players
 
   def initialize
     @players = []
+    @available_players = []
     @team_one = []
     @team_two = []
   end
@@ -18,12 +19,16 @@ class App
     end
   end
 
-  def generate_teams(number)
-    players.shuffle!
-    first_five = players[0..(number.to_i/2 -1)]
-    first_five.each{|player| @team_one << player}
-    second_five = players[(number.to_i/2)..number]
-    second_five.each{|player| @team_two << player}
+  def available(name)
+    @available_players << name
+  end
+
+  def generate_teams(number = available_players.length)
+    @available_players.shuffle!
+      first_team = @available_players[0..(number/2 -1)]
+      first_team.each{|player| @team_one << player}
+      second_team = @available_players[(number/2)..-1]
+      second_team.each{|player| @team_two << player}
   end
 
   def reset_teams
