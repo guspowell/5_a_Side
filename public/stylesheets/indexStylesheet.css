@@ -1,0 +1,33 @@
+html {
+  background: url(../images/backgroundimage.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
+  font-family: helvetica;
+}
+
+.box {
+    width: 40%;
+    height: 55%;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    padding: 1%;
+}
+
+.welcome-message {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  padding: 1%;
+}
