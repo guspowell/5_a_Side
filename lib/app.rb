@@ -1,5 +1,7 @@
 class App
 
+  attr_accessor :players
+
   def initialize
     @players = []
   end
@@ -8,13 +10,11 @@ class App
     2
   end
 
-  def players
-    @players
-  end
-
   def add_player(name)
     if @players.length >= 12
       raise "Too many players"
+    elsif players.include?(name)
+      raise "#{name} is already in the system!"
     else
       @players << name
     end
