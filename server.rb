@@ -8,7 +8,7 @@ class FiveASide < Sinatra::Base
 
   DataMapper.setup(:default, "postgres://localhost/five_a_side_#{env}")
 
-  # require the file that we want to store in the database
+  require './lib/models/player.rb'
 
   DataMapper.finalize
 

@@ -14,5 +14,6 @@ source 'https://rubygems.org'
     gem 'database_cleaner'
     gem 'launchy'
     gem 'shotgun'
+    gem 'database_cleaner'
 
   end
