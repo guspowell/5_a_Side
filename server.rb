@@ -2,7 +2,7 @@ require 'sinatra/base'
 
 class FiveASide < Sinatra::Base
   get '/' do
-
+    erb :index
   end
 
   # start the server if ruby file executed directly
