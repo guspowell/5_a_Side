@@ -9,7 +9,16 @@
     </span>
   </form>
 </section>
+
+
 <% if flash[:notice] %>
   <p><%= flash[:notice] %></p>
 <% end %>
-<p><%= @app.available_players %></p>
+
+<section class="available-players">
+  <ul>
+  <% @app.available_players.each do |player| %>
+    <li><%= player %> </li>
+  <% end %>
+  </ul>
+</section>

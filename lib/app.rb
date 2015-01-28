@@ -14,11 +14,7 @@ class App
   end
 
   def available(name)
-    if @available_players.length < 13
-      @available_players << name
-    else
-      raise 'Too many players'
-    end
+    @available_players << name if @available_players.length < 12
   end
 
   def generate_teams(number = available_players.length)

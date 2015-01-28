@@ -62,12 +62,15 @@ class FiveASide < Sinatra::Base
 
   post '/playing' do
     name = current_player.username
-    if app.available_players.length < 13
+    if app.available_players.include?(name)
+      flash[:notice] = 'You are already playing this week'
+      redirect to('/main')
+    elsif app.available_players.length >= 12
+      flash[:notice] = 'Sorry, the game is full'
+      redirect to('/main')
+    else
       app.available(name)
       Player.first(username: name).update(available: true)
-    else
-      flash[:notice] = 'Sorry, you can not add more players'
-      redirect to('/main')
     end
     redirect to('/main')
   end

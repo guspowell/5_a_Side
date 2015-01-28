@@ -29,12 +29,6 @@ describe App do
       expect(app.players.first).to eq('ronaldo')
     end
 
-    it 'should not be able to have more than 12 available players' do
-      add_and_available_players(13)
-      app.add_player('pirlo')
-      expect(lambda { app.available('pirlo') }).to raise_error(RuntimeError, "Too many players")
-    end
-
     it 'players can decide whether they are available or not' do
       expect(app.available_players.length).to eq 0
       app.add_player('ronaldo')

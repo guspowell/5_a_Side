@@ -7,14 +7,37 @@ feature 'Player chooses to play or not' do
     login('Pirlo')
   end
 
+  def adding_different_players(num)
+    i = 0
+    while i < num do
+      Player.create(:username => "#{i} rooney")
+      visit ('/')
+      login("#{i} rooney")
+      click_button 'YES'
+      i += 1
+    end
+  end
+
   scenario 'should see a question asking if player wants to play' do
     expect(page).to have_content('Would you like to play this week?')
     expect(page).to have_button('YES')
     expect(page).to have_button('NO')
   end
 
-  scenario 'should choose an option between two buttons' do
+  scenario 'should be able to click yes and be added to available players' do
     click_button 'YES'
+    expect(page).to have_content(["Pirlo"])
+  end
+
+  scenario 'should not be able to add yourself twice' do
+    click_button 'YES'
+    click_button 'YES'
+    expect(page).to have_content("You are already playing this week")
+  end
+
+  scenario 'should not be able to add yourself if there are twelve players already' do
+    adding_different_players(15)
+    expect(page).to have_content("Sorry, the game is full")
   end
 
 end
