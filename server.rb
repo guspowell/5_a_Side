@@ -40,6 +40,18 @@ class FiveASide < Sinatra::Base
     end
   end
 
+  post '/sessions' do
+    username = params[:username_login]
+    if Player.first(username: username).username == username
+      player = Player.first(username: username)
+      session[:player_id] = player.id
+      redirect to('/main')
+    else
+      flash.now[:notice] = 'This username is not in the system'
+      erb :index
+    end
+  end
+
   get '/main' do
     current_player
     erb :main

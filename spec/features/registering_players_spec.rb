@@ -22,7 +22,6 @@ feature "User wants to register" do
 
   scenario "show a message to greet the user" do
     sign_up
-    save_and_open_page
     expect(page).to have_content('Welcome ronaldo')
   end
 
