@@ -29,15 +29,15 @@ describe App do
       expect(app.players[0]).to eq('ronaldo')
     end
 
-    it 'should not be able to add more than 12 players' do
-      add_and_available_players(12)
-      expect(lambda { app.add_player('pirlo') }).to raise_error(RuntimeError, "Too many players")
-    end
+    # it 'should not be able to add more than 12 players' do
+    #   add_and_available_players(12)
+    #   expect(lambda { app.add_player('pirlo') }).to raise_error(RuntimeError, "Too many players")
+    # end
 
-    it 'cannot add the same player twice' do
-      app.add_player('messi')
-      expect(lambda { app.add_player('messi') }).to raise_error(RuntimeError, "messi is already in the system!")
-    end
+    # it 'cannot add the same player twice' do
+    #   app.add_player('messi')
+    #   expect(lambda { app.add_player('messi') }).to raise_error(RuntimeError, "messi is already in the system!")
+    # end
 
     it 'players can decide whether they are available or not' do
       expect(app.available_players.length).to eq 0

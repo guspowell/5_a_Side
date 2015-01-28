@@ -24,13 +24,15 @@ class FiveASide < Sinatra::Base
     @current_player ||=Player.get(session[:player_id]) if session[:player_id]
   end
 
+  app = App.new
 
   get '/' do
     erb :index
   end
 
   post '/registering' do
-    @player = Player.new(username: params[:username_register])
+    app.add_player(params[:username_register])
+    @player = Player.new(username: app.players.last)
     if @player.save
       session[:player_id] = @player.id
       redirect to('/main')
@@ -58,7 +60,10 @@ class FiveASide < Sinatra::Base
   end
 
   post '/playing' do
-    current_player
+    name = current_player.username
+    app.available(name)
+    Player.first(username: name).update(available: true)
+    p Player.first(username: name)
     redirect to('/main')
   end
 
