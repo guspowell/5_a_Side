@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "User wants to register" do
+feature "Player wants to register" do
 
 
   scenario "visiting the website" do

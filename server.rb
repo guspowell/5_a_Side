@@ -57,6 +57,11 @@ class FiveASide < Sinatra::Base
     erb :main
   end
 
+  post '/playing' do
+    current_player
+    redirect to('/main')
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

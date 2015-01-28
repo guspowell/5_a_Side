@@ -4,5 +4,6 @@ class Player
 
   property :id,        Serial
   property :username,  String, :unique => true
+  property :available, Boolean, :default => false
 
 end

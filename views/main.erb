@@ -1,1 +1,11 @@
 <p>Welcome <%= current_player.username %></p>
+
+<section class='play_or_not'>
+  <form action='/playing' method='post'>
+    <h3>Would you like to play this week?</h3>
+    <span class='yes-no-buttons'>
+      <input type='submit' name='yes' value='YES'>
+      <input type='submit' name='no' value='NO'>
+    </span>
+  </form>
+</section>
