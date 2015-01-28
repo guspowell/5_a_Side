@@ -9,10 +9,9 @@ html {
 }
 
 .box {
-    background-color: black;
-    height: 15%;
+    background: rgba(0,0,0,0.7);
+    height: 14%;
     width: 60%;
-    background-opacity: 0.5;
     position: absolute;
     top:0;
     bottom: 0;
@@ -22,8 +21,7 @@ html {
     border-radius: 10px;
     color: white;
     text-align: center;
-    padding: 1%;
-    padding-top: 3%;
+    padding: 2.5% 0 2.5% 0;
 }
 
 .sign-in-elements {
@@ -31,7 +29,18 @@ html {
   font-size: 2.5em;
 }
 
-.sign-in input[type=submit] {
+.register-elements {
+  display: inline;
+  font-size: 2.5em;
+}
+
+.register .join-message {
+  display: block;
+  font-size: 0.7em;
+  margin-bottom: 1.5%;
+}
+
+.box input[type=submit] {
   display: inline-block;
   width: 100px;
   height: 35px;
@@ -48,7 +57,7 @@ html {
   font-size: 0.5em;
 }
 
-.sign-in input[type=text] {
+.box input[type=text] {
   display: inline-block;
   width: 200px;
   height: 35px;
@@ -66,7 +75,7 @@ html {
 
 .register-link {
   display: block;
-  margin-top: 2%;
+  margin-top: 3%;
   text-decoration: none;
   color: white;
 }

@@ -1,11 +1,17 @@
-<% if flash[:notice] %>
-  <p><%= flash[:notice] %></p>
-<% end %>
+<section class="box">
 
-<section class="register">
-  Not on the system? Enter a username to join:<br>
-  <form action="/registering" method="post">
-    Username: <input type='text' name='username_register'>
-    <input type='submit' name='submit-register' value='submit-register'>
-  </form>
+  <% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+  <% end %>
+
+  <section class="register">
+    <section class="register-elements">
+      <div class="join-message">Enter a username to join</div>
+      <form action="/registering" method="post">
+        <input type='text' name='username_register'>
+        <input type='submit' name='submit-register' value='Register'>
+      </form>
+    </section>
+  </section>
+
 </section>
