@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require './lib/app.rb'
 require 'data_mapper'
+require 'rack-flash'
 
 class FiveASide < Sinatra::Base
 
@@ -14,15 +15,24 @@ class FiveASide < Sinatra::Base
 
   DataMapper.auto_upgrade!
 
+  enable :sessions
+  set :session_secret, 'super secret'
+  use Rack::Flash
+  use Rack::MethodOverride
+
   get '/' do
     erb :index
   end
 
   post '/registering' do
     @player = Player.new(username: params[:username_register])
-    @player.save
-    session[:player] = @player.id
-    redirect to('/')
+    if @player.save
+      session[:player] = @player.id
+      redirect to('/main')
+    else
+      flash.now[:notice] = 'This username is already taken'
+      erb :index
+    end
   end
 
   # start the server if ruby file executed directly

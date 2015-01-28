@@ -1,5 +1,9 @@
 <section class="box">
 
+  <% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+  <% end %>
+
   <section class="register">
     Not on the system? Enter a username to join:<br>
     <form action="/registering" method="post">
