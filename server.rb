@@ -20,6 +20,11 @@ class FiveASide < Sinatra::Base
   use Rack::Flash
   use Rack::MethodOverride
 
+  def current_player
+    @current_player ||=Player.get(session[:player_id]) if session[:player_id]
+  end
+
+
   get '/' do
     erb :index
   end
@@ -27,12 +32,17 @@ class FiveASide < Sinatra::Base
   post '/registering' do
     @player = Player.new(username: params[:username_register])
     if @player.save
-      session[:player] = @player.id
+      session[:player_id] = @player.id
       redirect to('/main')
     else
       flash.now[:notice] = 'This username is already taken'
       erb :index
     end
+  end
+
+  get '/main' do
+    current_player
+    erb :main
   end
 
   # start the server if ruby file executed directly
