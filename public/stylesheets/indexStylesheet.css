@@ -5,6 +5,7 @@ html {
   -o-background-size: cover;
   background-size: 100%;
   font-family: helvetica;
+  color: white;
 }
 
 .box {

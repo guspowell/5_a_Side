@@ -10,8 +10,14 @@ feature 'player wants to login' do
     visit ('/')
     expect(page).not_to have_content('Welcome messi')
     login
-    save_and_open_page
     expect(page).to have_content('Welcome messi')
+  end
+
+  scenario 'logging in with incorrect username' do
+    visit ('/')
+    expect(page).not_to have_content('Welcome messi')
+    login('bale')
+    expect(page).to have_content('This username is not in the system')
   end
 
 end

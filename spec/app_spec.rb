@@ -26,7 +26,6 @@ describe App do
 
     it 'should be able to add players' do
       app.add_player('ronaldo')
-      p @players.inspect
       expect(app.players[0]).to eq('ronaldo')
     end
 

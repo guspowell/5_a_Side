@@ -42,7 +42,7 @@ class FiveASide < Sinatra::Base
 
   post '/sessions' do
     username = params[:username_login]
-    if Player.first(username: username).username == username
+    if Player.first(username: username)
       player = Player.first(username: username)
       session[:player_id] = player.id
       redirect to('/main')

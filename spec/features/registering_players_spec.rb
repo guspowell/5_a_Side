@@ -10,7 +10,6 @@ feature "User wants to register" do
 
   scenario "being a new player and registering" do
     sign_up
-    p Player.first.inspect
     expect(Player.first.username).to eq('ronaldo')
   end
 
