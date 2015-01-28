@@ -26,7 +26,7 @@ feature 'Player chooses to play or not' do
 
   scenario 'should be able to click yes and be added to available players' do
     click_button 'YES'
-    expect(page).to have_content(["Pirlo"])
+    expect(page).to have_content("Pirlo")
   end
 
   scenario 'should not be able to add yourself twice' do

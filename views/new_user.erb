@@ -1,0 +1,11 @@
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
+<section class="register">
+  Not on the system? Enter a username to join:<br>
+  <form action="/registering" method="post">
+    Username: <input type='text' name='username_register'>
+    <input type='submit' name='submit-register' value='submit-register'>
+  </form>
+</section>

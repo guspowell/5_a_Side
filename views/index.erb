@@ -4,20 +4,13 @@
     <p><%= flash[:notice] %></p>
   <% end %>
 
-  <section class="register">
-    Not on the system? Enter a username to join:<br>
-    <form action="/registering" method="post">
-      Username: <input type='text' name='username_register'>
-      <input type='submit' name='submit-register' value='submit-register'>
-    </form>
-  </section>
-
   <section class="sign-in">
-    Already on the system? Enter your username:<br>
+    <h1>Already on the system? Enter your username:</h1><br>
     <form action="/sessions" method="post">
       Username: <input type='text' name='username_login'>
       <input type='submit' name='submit-login' value='submit-login'>
     </form>
+    <a href= "/new_user">Click here to register</a>
   </section>
 
 </section>

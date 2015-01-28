@@ -5,7 +5,7 @@ feature "Player wants to register" do
 
   scenario "visiting the website" do
     visit '/'
-    expect(page).to have_content("Not on the system? Enter a username")
+    expect(page).to have_content("Click here to register")
   end
 
   scenario "being a new player and registering" do
@@ -28,6 +28,7 @@ end
 
   def sign_up(username = 'ronaldo')
     visit '/'
+    click_link 'Click here to register'
     fill_in :username_register, :with => username
     click_button 'submit-register'
   end

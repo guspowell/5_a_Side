@@ -9,8 +9,7 @@ html {
 }
 
 .box {
-    width: 40%;
-    height: 55%;
+    height: 20%;
     background-color: black;
     opacity: 0.6;
     position: absolute;
@@ -24,6 +23,10 @@ html {
     color: white;
     text-align: center;
     padding: 1%;
+}
+
+.sign-in h1 {
+  font-size: 2.5em;
 }
 
 .welcome-message {

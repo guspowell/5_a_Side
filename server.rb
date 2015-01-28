@@ -30,6 +30,10 @@ class FiveASide < Sinatra::Base
     erb :index
   end
 
+  get '/new_user' do
+    erb :new_user
+  end
+
   post '/registering' do
     app.add_player(params[:username_register])
     @player = Player.new(username: app.players.last)
@@ -38,7 +42,7 @@ class FiveASide < Sinatra::Base
       redirect to('/main')
     else
       flash.now[:notice] = 'This username is already taken'
-      erb :index
+      erb :new_user
     end
   end
 
