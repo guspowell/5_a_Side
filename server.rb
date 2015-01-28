@@ -56,14 +56,19 @@ class FiveASide < Sinatra::Base
 
   get '/main' do
     current_player
+    @app = app
     erb :main
   end
 
   post '/playing' do
     name = current_player.username
-    app.available(name)
-    Player.first(username: name).update(available: true)
-    p Player.first(username: name)
+    if app.available_players.length < 13
+      app.available(name)
+      Player.first(username: name).update(available: true)
+    else
+      flash[:notice] = 'Sorry, you can not add more players'
+      redirect to('/main')
+    end
     redirect to('/main')
   end
 

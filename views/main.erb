@@ -9,3 +9,7 @@
     </span>
   </form>
 </section>
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+<p><%= @app.available_players %></p>
