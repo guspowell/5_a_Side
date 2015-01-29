@@ -35,13 +35,18 @@ class FiveASide < Sinatra::Base
   end
 
   post '/registering' do
-    app.add_player(params[:username_register])
-    @player = Player.new(username: app.players.last)
-    if @player.save
-      session[:player_id] = @player.id
-      redirect to('/main')
+    if params[:username_register].length != 0
+      app.add_player(params[:username_register])
+      @player = Player.new(username: app.players.last)
+      if @player.save
+        session[:player_id] = @player.id
+        redirect to('/main')
+      else
+        flash.now[:notice] = 'This username is already taken'
+        erb :new_user
+      end
     else
-      flash.now[:notice] = 'This username is already taken'
+      flash.now[:notice] = 'Please enter a valid username'
       erb :new_user
     end
   end
@@ -76,6 +81,11 @@ class FiveASide < Sinatra::Base
       app.available(name)
       Player.first(username: name).update(available: true)
     end
+    redirect to('/main')
+  end
+
+  post '/reset' do
+    app.reset_available_players
     redirect to('/main')
   end
 

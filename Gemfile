@@ -14,5 +14,7 @@ source 'https://rubygems.org'
     gem 'database_cleaner'
     gem 'launchy'
     gem 'shotgun'
+    gem 'preek'
+    gem 'codeclimate-test-reporter'
 
   end

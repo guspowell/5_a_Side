@@ -26,5 +26,5 @@ end
 def login(username)
   visit '/'
   fill_in :username_login, :with => username
-  click_button 'submit-login'
+  click_button 'Login'
 end

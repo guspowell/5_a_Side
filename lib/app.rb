@@ -30,4 +30,8 @@ class App
     @team_two.clear
   end
 
+  def reset_available_players
+    @available_players.clear
+  end
+
 end

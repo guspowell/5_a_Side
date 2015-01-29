@@ -1,7 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    abstract_type (0.0.7)
+    adamantium (0.2.0)
+      ice_nine (~> 0.11.0)
+      memoizable (~> 0.4.0)
     addressable (2.3.6)
+    ast (2.0.0)
     bcrypt (3.1.9)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
@@ -12,6 +17,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    concord (0.1.5)
+      adamantium (~> 0.2.0)
+      equalizer (~> 0.0.9)
     cucumber (1.3.18)
       builder (>= 2.1.2)
       diff-lcs (>= 1.1.3)
@@ -70,21 +78,31 @@ GEM
       dm-core (~> 1.2.0)
     do_postgres (0.10.14)
       data_objects (= 0.10.14)
+    equalizer (0.0.9)
     extlib (0.9.16)
     fastercsv (1.5.5)
     gherkin (2.12.2)
       multi_json (~> 1.3)
     highline (1.6.21)
+    ice_nine (0.11.1)
     json (1.8.2)
     json_pure (1.8.2)
     launchy (2.4.3)
       addressable (~> 2.3)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
     mime-types (2.4.3)
     mini_portile (0.6.2)
     multi_json (1.10.1)
     multi_test (0.1.1)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    parser (2.2.0.2)
+      ast (>= 1.1, < 3.0)
+    preek (1.7.0)
+      reek (~> 1.6.3)
+      thor (~> 0.18)
+    procto (0.0.2)
     rack (1.6.0)
     rack-flash3 (1.0.5)
       rack
@@ -92,6 +110,11 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rainbow (2.0.0)
+    reek (1.6.4)
+      parser (~> 2.2.0.pre.7)
+      rainbow (>= 1.99, < 3.0)
+      unparser (~> 0.2.2)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -115,7 +138,17 @@ GEM
       diff-lcs (>= 1.1.2)
       extlib (>= 0.9.5)
       highline (>= 1.4.0)
+    thor (0.19.1)
+    thread_safe (0.3.4)
     tilt (1.4.1)
+    unparser (0.2.2)
+      abstract_type (~> 0.0.7)
+      adamantium (~> 0.2.0)
+      concord (~> 0.1.5)
+      diff-lcs (~> 1.2.5)
+      equalizer (~> 0.0.9)
+      parser (~> 2.2.0.2)
+      procto (~> 0.0.2)
     uuidtools (2.1.5)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -131,6 +164,7 @@ DEPENDENCIES
   database_cleaner
   dm-postgres-adapter
   launchy
+  preek
   rack-flash3
   rspec
   shotgun

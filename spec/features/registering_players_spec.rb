@@ -2,7 +2,6 @@ require 'spec_helper'
 
 feature "Player wants to register" do
 
-
   scenario "visiting the website" do
     visit '/'
     expect(page).to have_content("Click here to register")
@@ -19,6 +18,11 @@ feature "Player wants to register" do
     expect(page).to have_content('This username is already taken')
   end
 
+  scenario "leaving the username field blank" do
+    sign_up('')
+    expect(page).to have_content('Please enter a valid username')
+  end
+
   scenario "show a message to greet the user" do
     sign_up
     expect(page).to have_content('Welcome ronaldo')
@@ -30,5 +34,5 @@ end
     visit '/'
     click_link 'Click here to register'
     fill_in :username_register, :with => username
-    click_button 'submit-register'
+    click_button 'Register'
   end
