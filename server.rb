@@ -66,6 +66,8 @@ class FiveASide < Sinatra::Base
   get '/main' do
     current_player
     @app = app
+    @team1 = app.team_one
+    @team2 = app.team_two
     erb :main
   end
 
@@ -86,6 +88,13 @@ class FiveASide < Sinatra::Base
 
   post '/reset' do
     app.reset_available_players
+    redirect to('/main')
+  end
+
+  post '/generate' do
+    app.generate_teams()
+    @team1 = app.team_one
+    @team2 = app.team_two
     redirect to('/main')
   end
 
