@@ -1,9 +1,5 @@
 <section class="box">
 
-  <% if flash[:notice] %>
-    <p><%= flash[:notice] %></p>
-  <% end %>
-
   <section class="sign-in">
     <section class="sign-in-elements">
       <form action="/sessions" method="post">
@@ -13,5 +9,13 @@
   </section>
     <a href= "/new_user" class="register-link">Click here to register</a>
   </section>
+
+</section>
+
+<section class="flash-error">
+
+  <% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+  <% end %>
 
 </section>

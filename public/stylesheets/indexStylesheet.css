@@ -1,3 +1,5 @@
+@import url('MainStylesheet.css');
+
 html {
   background: url(../images/backgroundimage.png) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -21,7 +23,7 @@ html {
     border-radius: 10px;
     color: white;
     text-align: center;
-    padding: 2.5% 0 2.5% 0;
+    padding: 2.5% 0 0.5% 0;
 }
 
 .sign-in-elements {
@@ -89,4 +91,11 @@ html {
   color: white;
   font-size: 1.5em;
   padding: 1%;
+}
+
+.flash-error {
+  display: block;
+  text-align: center;
+  color: red;
+  margin-top: 5%;
 }
