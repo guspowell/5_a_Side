@@ -73,10 +73,8 @@ class FiveASide < Sinatra::Base
 
   post '/playing' do
     name = current_player.username
-    if app.available_players.include?(name)
-      flash[:notice] = 'You are already playing this week'
-      redirect to('/main')
-    elsif app.available_players.length >= 12
+    p app.too_many_players?.inspect
+    if app.too_many_players?
       flash[:notice] = 'Sorry, the game is full'
       redirect to('/main')
     else

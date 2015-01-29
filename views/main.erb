@@ -1,9 +1,8 @@
 <section class='play_or_not'>
   <form action='/playing' method='post'>
     <h2>Welcome <%= current_player.username %>, would you like to play this week?</h2>
-    <div class='yes-no-buttons'>
-      <input type='submit' name='yes' value='YES'>
-      <input type='submit' name='no' value='NO'>
+    <div class='available-button'>
+      <input type='submit' name='yes' value='AVAILABLE'>
     </div>
   </form>
 </section>

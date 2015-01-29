@@ -11,20 +11,12 @@ feature 'Player chooses to play or not' do
 
   scenario 'should see a question asking if player wants to play' do
     expect(page).to have_content('would you like to play this week?')
-    expect(page).to have_button('YES')
-    expect(page).to have_button('NO')
+    expect(page).to have_button('AVAILABLE')
   end
 
   scenario 'should be able to click yes and be added to available players' do
-    click_button 'YES'
+    click_button 'AVAILABLE'
     expect(page).to have_content("Pirlo")
-  end
-
-  scenario 'should not be able to add yourself twice' do
-    click_button 'YES'
-    click_button 'YES'
-    expect(page).to have_content("You are already playing this week")
-
   end
 
   scenario 'should not be able to add yourself if there are twelve players already' do
@@ -47,7 +39,7 @@ end
       Player.create(:username => "#{i} rooney")
       visit ('/')
       login("#{i} rooney")
-      click_button 'YES'
+      click_button 'AVAILABLE'
       i += 1
     end
   end

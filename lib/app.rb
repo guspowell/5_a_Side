@@ -14,15 +14,19 @@ class App
   end
 
   def available(name)
-    @available_players << name if @available_players.length < 12
+    if @available_players.include?(name)
+      @available_players.delete(name)
+    elsif @available_players.length < 12
+      @available_players << name
+    end
   end
 
   def generate_teams(number = available_players.length)
-    @available_players.shuffle!
-      first_team = @available_players[0..(number/2 -1)]
-      first_team.each{|player| @team_one << player}
-      second_team = @available_players[(number/2)..-1]
-      second_team.each{|player| @team_two << player}
+    available_players_dup = @available_players.dup.shuffle!
+      first_team = available_players_dup[0..(number/2 -1)]
+      first_team.each{|player| @team_one << player if !@team_one.include?(player) && !@team_two.include?(player)}
+      second_team = available_players_dup[(number/2)..-1]
+      second_team.each{|player| @team_two << player if !@team_one.include?(player) && !@team_two.include?(player)}
   end
 
   def reset_teams
@@ -34,4 +38,7 @@ class App
     @available_players.clear
   end
 
+  def too_many_players?
+    @available_players.length >= 12
+  end
 end
