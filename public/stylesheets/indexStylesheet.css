@@ -104,3 +104,7 @@ body {
   color: red;
   margin-top: 5%;
 }
+
+.reset-teams-button {
+  display: none;
+}
