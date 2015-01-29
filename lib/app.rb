@@ -16,7 +16,8 @@ class App
   def available(name)
     if @available_players.include?(name)
       @available_players.delete(name)
-    elsif @available_players.length < 12
+    end
+    unless @available_players.length >= 12
       @available_players << name
     end
   end
