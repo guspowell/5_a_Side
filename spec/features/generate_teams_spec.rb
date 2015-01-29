@@ -7,9 +7,10 @@ feature 'Generating two teams' do
   include Helpers
 
   scenario 'With even number of players' do
-    adding_different_players(6)
+    adding_different_players_and_generate(6)
     expect(page).to have_selector('.available-players li', count: 6)
     click_button 'GENERATE'
+    save_and_open_page
     expect(page).to have_selector('.team1-box li', count: 3)
     expect(page).to have_selector('.team2-box li', count: 3)
   end

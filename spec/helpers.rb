@@ -12,9 +12,16 @@ module Helpers
   def adding_different_players(num)
     i = 0
     while i < num do
-      Player.create(:username => "#{i} rooney")
-      visit ('/')
-      login("#{i} rooney")
+      sign_up("#{i} rooney")
+      click_button 'AVAILABLE'
+      i += 1
+    end
+  end
+
+  def adding_different_players_and_generate(num)
+    i = 0
+    while i < num do
+      sign_up("#{i} drogba")
       click_button 'AVAILABLE'
       i += 1
     end
@@ -31,7 +38,6 @@ module Helpers
     visit '/'
     fill_in :username_login, :with => username
     click_button 'Login'
-    visit '/session'
   end
 
 end

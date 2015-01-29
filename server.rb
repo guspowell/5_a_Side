@@ -90,6 +90,11 @@ class FiveASide < Sinatra::Base
     redirect to('/main')
   end
 
+  post '/reset_teams' do
+    app.reset_teams
+    redirect to('/')
+  end
+
   post '/generate' do
     app.generate_teams()
     @team1 = app.team_one

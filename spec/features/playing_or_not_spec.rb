@@ -22,7 +22,9 @@ feature 'Player chooses to play or not' do
   end
 
   scenario 'should not be able to add yourself if there are twelve players already' do
-    click_button 'AVAILABLE'
+    click_button 'RESET'
+    visit '/'
+    click_button 'RESET TEAMS'
     adding_different_players(14)
     save_and_open_page
     expect(page).to have_content("Sorry, the game is full")
