@@ -17,6 +17,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    codeclimate-test-reporter (0.4.6)
+      simplecov (>= 0.7.1, < 1.0.0)
     concord (0.1.5)
       adamantium (~> 0.2.0)
       equalizer (~> 0.0.9)
@@ -78,6 +80,7 @@ GEM
       dm-core (~> 1.2.0)
     do_postgres (0.10.14)
       data_objects (= 0.10.14)
+    docile (1.1.5)
     equalizer (0.0.9)
     extlib (0.9.16)
     fastercsv (1.5.5)
@@ -129,6 +132,11 @@ GEM
     rspec-support (3.1.2)
     shotgun (0.9)
       rack (>= 1.0)
+    simplecov (0.9.1)
+      docile (~> 1.1.0)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -158,6 +166,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  codeclimate-test-reporter
   cucumber
   cucumber-sinatra
   data_mapper
