@@ -5,6 +5,7 @@ source 'https://rubygems.org'
   gem 'dm-postgres-adapter'
   gem 'rack-flash3'
   gem 'cucumber-sinatra'
+  gem 'rake'
 
   group :test do
 
