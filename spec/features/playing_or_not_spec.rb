@@ -20,8 +20,19 @@ feature 'Player chooses to play or not' do
   end
 
   scenario 'should not be able to add yourself if there are twelve players already' do
-    adding_different_players(15)
+    click_button 'AVAILABLE'
+    adding_different_players(14)
     expect(page).to have_content("Sorry, the game is full")
+  end
+
+  scenario 'should be able to click again to become unavailable' do
+    click_button 'RESET'
+    click_button 'AVAILABLE'
+    expect(page).to have_selector('.available-players li', count: 1)
+    click_button 'AVAILABLE'
+    expect(page).to have_selector('.available-players li', count: 0)
+
+
   end
 
 end

@@ -73,9 +73,11 @@ class FiveASide < Sinatra::Base
 
   post '/playing' do
     name = current_player.username
-    if app.available_players.length >= 12
+    if app.too_many_players? && app.available_players.include?(name) == false
       flash[:notice] = 'Sorry, the game is full'
       redirect to('/main')
+    elsif app.too_many_players? && app.available_players.include?(name)
+      app.available_players.delete(name)
     else
       app.available(name)
       Player.first(username: name).update(available: true)
