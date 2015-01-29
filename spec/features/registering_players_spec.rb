@@ -1,6 +1,9 @@
 require 'spec_helper'
+require 'helpers'
 
 feature "Player wants to register" do
+
+  include Helpers
 
   scenario "visiting the website" do
     visit '/'
@@ -29,10 +32,3 @@ feature "Player wants to register" do
   end
 
 end
-
-  def sign_up(username = 'ronaldo')
-    visit '/'
-    click_link 'Click here to register'
-    fill_in :username_register, :with => username
-    click_button 'Register'
-  end

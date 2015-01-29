@@ -1,6 +1,9 @@
 require 'spec_helper'
+require 'helpers'
 
 feature 'Player wants to login' do
+
+  include Helpers
 
   before(:each) do
     Player.create(:username => 'messi')
@@ -20,11 +23,4 @@ feature 'Player wants to login' do
     expect(page).to have_content('This username is not in the system')
   end
 
-end
-
-
-def login(username)
-  visit '/'
-  fill_in :username_login, :with => username
-  click_button 'Login'
 end

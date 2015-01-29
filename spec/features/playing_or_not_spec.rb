@@ -1,13 +1,15 @@
 require 'spec_helper'
 require_relative '../../lib/app.rb'
+require 'helpers'
 
 feature 'Player chooses to play or not' do
+
+  include Helpers
 
   before(:each) do
     Player.create(:username => 'Pirlo')
     login('Pirlo')
   end
-
 
   scenario 'should see a question asking if player wants to play' do
     expect(page).to have_content('would you like to play this week?')
@@ -22,6 +24,7 @@ feature 'Player chooses to play or not' do
   scenario 'should not be able to add yourself if there are twelve players already' do
     click_button 'AVAILABLE'
     adding_different_players(14)
+    save_and_open_page
     expect(page).to have_content("Sorry, the game is full")
   end
 
@@ -31,26 +34,6 @@ feature 'Player chooses to play or not' do
     expect(page).to have_selector('.available-players li', count: 1)
     click_button 'AVAILABLE'
     expect(page).to have_selector('.available-players li', count: 0)
-
-
   end
 
 end
-
-def login(username)
-  visit '/'
-  fill_in :username_login, :with => username
-  click_button 'Login'
-end
-
-
-  def adding_different_players(num)
-    i = 0
-    while i < num do
-      Player.create(:username => "#{i} rooney")
-      visit ('/')
-      login("#{i} rooney")
-      click_button 'AVAILABLE'
-      i += 1
-    end
-  end

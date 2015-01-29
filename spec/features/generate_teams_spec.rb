@@ -1,7 +1,10 @@
 require 'spec_helper'
 require_relative '../../lib/app.rb'
+require 'helpers'
 
 feature 'Generating two teams' do
+
+  include Helpers
 
   scenario 'With even number of players' do
     adding_different_players(6)
@@ -16,15 +19,4 @@ feature 'Generating two teams' do
   #   click_button 'GENERATE'
   #   expect(page).to have_selector('.available-players li', count: 0)
   # end
-end
-
-def adding_different_players(num)
-  i = 0
-  while i < num do
-    Player.create(:username => "#{i} rooney")
-    visit ('/')
-    login("#{i} rooney")
-    click_button 'YES'
-    i += 1
-  end
 end

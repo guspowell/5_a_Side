@@ -1,17 +1,11 @@
 require './lib/app'
+require 'helpers'
 
 describe App do
 
-  let(:app){App.new}
+  include Helpers
 
-  def add_and_available_players(num)
-    i = 0
-      while i < num do
-        app.add_player("#{i} rooney")
-        app.available("#{i} rooney")
-        i += 1
-      end
-  end
+  let(:app){App.new}
 
   it 'should have two teams' do
     expect(app.team_one).to eq []
