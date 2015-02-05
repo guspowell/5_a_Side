@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/reset.css"/>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/indexStylesheet.css"/>
+    <title>5-a-Side</title>
+  </head>
+
+  <body>
+
+    <section class='play_or_not'>
+  <form action='/playing' method='post'>
+    <h2>Welcome 13 rooney, would you like to play this week?</h2>
+    <div class='available-button'>
+      <input type='submit' name='yes' value='AVAILABLE'>
+    </div>
+  </form>
+</section>
+
+<section class="flash-error">
+  
+    <p>Sorry, the game is full</p>
+  
+</section>
+
+<section class="available-players">
+  <ul>
+  
+    <li>0 rooney </li>
+  
+    <li>1 rooney </li>
+  
+    <li>2 rooney </li>
+  
+    <li>3 rooney </li>
+  
+    <li>4 rooney </li>
+  
+    <li>5 rooney </li>
+  
+    <li>6 rooney </li>
+  
+    <li>7 rooney </li>
+  
+    <li>8 rooney </li>
+  
+    <li>9 rooney </li>
+  
+    <li>10 rooney </li>
+  
+    <li>11 rooney </li>
+  
+  </ul>
+</section>
+
+<form action='/reset' method='post'>
+  <div class='reset-button'>
+    <input type='submit' name='reset' value='RESET'>
+  </div>
+</form>
+
+<div class='generate-button'>
+  <form action='/generate' method='post'>
+      <input type='submit' name='generate' value='GENERATE'>
+  </form>
+</div>
+
+<section class="team1-box">
+  <ul>
+    
+  </ul>
+</section>
+
+<section class="team2-box">
+  <ul>
+    
+  </ul>
+</section>
+
+
+  </body>
+</html>
