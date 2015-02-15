@@ -1,9 +1,44 @@
-<section class="box">
+<section class='header'>
+  <div class="makers-logo">
+    <img src="images/MA.svg">
+  </div>
+  <div class='menu'>
+    <a href=#>ABOUT</a>
+    <a href=#>RULES</a>
+    <a href=#>NOTIFICATIONS</a>
+  </div>
+</section>
+
+<section class='container'>
+  <div class='form'>
+    <div class='ma-5-aside'>
+      <img src="images/MA5aside.svg">
+    </div>
+    <div class='details'>
+      <form class='login-form' action="/sessions" method="post">
+        <input class='input-field' type='text' name='username_login'>
+        <input class='button-img' type="image" src="images/login_button.svg" name='submit-login'>
+      </form>
+      <form class='login-form' action="/registering" method="post">
+        <input class='input-field' type='text' name='username_register'>
+        <input class='button-img' type='image' src="images/joinbutton.svg" name='submit-register' value='Register'>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="footer">
+
+</section>
+
+
+
+<!-- <section class="box">
 
   <section class="sign-in">
     <section class="sign-in-elements">
       <form action="/sessions" method="post">
-          Enter your username <input type='text' name='username_login'>
+        <input type='text' name='username_login'>
         <input type="image" src="images/login_button.svg" name='submit-login'>
       </form>
   </section>
@@ -24,4 +59,4 @@
     <p><%= flash[:notice] %></p>
   <% end %>
 
-</section>
+</section> -->
