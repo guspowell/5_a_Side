@@ -74,6 +74,7 @@ p.question {
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
+  padding-top: 5%;
 }
 
 .box .left-col {
@@ -101,15 +102,61 @@ p.question {
 }
 
 .available-button {
-  background-color: #75a3d1;
+  background-color: #1fda9a;
+  height: 13%;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.available-button input[type=submit] {
+  background-color: transparent;
+  height: 13%;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1em;
+  padding-top: 5%;
+  color: white;
 }
 
 .generate-button {
-  background-color: #e05151;
+  background-color: #00CCFF;
+}
+
+.generate-button input[type=submit] {
+  background-color: transparent;
+  height: 13%;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1em;
+  padding-top: 5%;
+  color: white;
 }
 
 .reset-button {
-  background-color: #d9411e;
+  background-color: #ee4b3e;
+}
+
+.reset-button input[type=submit] {
+  background-color: transparent;
+  height: 13%;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1em;
+  padding-top: 5%;
+  color: white;
 }
 
 .box .right-col {

@@ -22,14 +22,35 @@
 
 <section class='container'>
   <div class='box'>
-    <p class="question">Make yourself available to play this week...</p>
     <section class="columns">
-      <div class='left-col'></div>
-      <div class='center-col'>
-        <div class='available-button'></div>
-        <div class='generate-button'></div>
-        <div class='reset-button'></div>
+      <div class='left-col'>
+        <ul>
+        <% @app.available_players.each do |player| %>
+          <li><%= player %> </li>
+        <% end %>
+        </ul>
       </div>
+
+      <div class='center-col'>
+        <div class='available-button'>
+          <form action='/playing' method='post'>
+            <input type='submit' name='yes' value='AVAILABLE'>
+          </form>
+        </div>
+
+        <div class='generate-button'>
+          <form action='/generate' method='post'>
+              <input type='submit' name='generate' value='GENERATE'>
+          </form>
+        </div>
+
+        <div class='reset-button'>
+          <form action='/reset' method='post'>
+            <input type='submit' name='reset' value='RESET'>
+          </form>
+        </div>
+      </div>
+
       <div class='right-col'>
         <div class='team1'></div>
         <div class='team2'></div>
@@ -46,7 +67,6 @@
 
 <!-- <section class='play_or_not'>
   <form action='/playing' method='post'>
-    <h2>Welcome <%= current_player.username %>, would you like to play this week?</h2>
     <div class='available-button'>
       <input type='submit' name='yes' value='AVAILABLE'>
     </div>
