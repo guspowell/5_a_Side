@@ -82,7 +82,22 @@ p.question {
   height: 100%;
   float: left;
   margin-left: 2.3%;
-  background-color: rgba(0,0,0,0.6)
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 1%;
+}
+
+.left-col ul {
+  margin: 1% 5% 0 5%;
+  font-size: 1.3em;
+
+}
+
+.left-col li {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  background-color: #1fda9a;
+  margin-top: 1%;
 }
 
 .box .center-col {
@@ -172,7 +187,36 @@ p.question {
   border: 1px solid black;
   margin-left: 0;
   margin-bottom: 7.7%;
-  background-color: rgba(0,0,0,0.6)
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 2%;
+}
+
+.team2 ul {
+  margin: 1% 5% 0 5%;
+  font-size: 1.3em;
+
+}
+
+.team2 li {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  background-color: #ee4b3e;
+  margin-top: 1%;
+}
+
+.team1 ul {
+  margin: 1% 5% 0 5%;
+  font-size: 1.3em;
+
+}
+
+.team1 li {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  background-color: #00CCFF;
+  margin-top: 1%;
 }
 
 .right-col .team2 {
@@ -180,7 +224,8 @@ p.question {
   height: 47%;
   border: 1px solid black;
   margin-left: 0;
-  background-color: rgba(0,0,0,0.6)
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 2%;
 }
 
 .footer {

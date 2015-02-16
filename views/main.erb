@@ -6,6 +6,7 @@
     <a href=#>ABOUT</a>
     <a href=#>RULES</a>
     <a href=#>NOTIFICATIONS</a>
+    <a href='/'>HOME</a>
   </div>
 </section>
 
@@ -52,8 +53,23 @@
       </div>
 
       <div class='right-col'>
-        <div class='team1'></div>
-        <div class='team2'></div>
+
+        <div class='team1'>
+          <ul>
+            <% @team1.each do |player| %>
+              <li><%= player %></li>
+            <% end %>
+          </ul>
+        </div>
+
+        <div class='team2'>
+          <ul>
+            <% @team2.each do |player| %>
+              <li><%= player %></li>
+            <% end %>
+          </ul>
+        </div>
+
       </div>
     </section>
   </div>

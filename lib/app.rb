@@ -36,6 +36,8 @@ class App
 
   def reset_available_players
     @available_players.clear
+    @team_one.clear
+    @team_two.clear
   end
 
   def too_many_players?
