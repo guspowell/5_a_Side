@@ -55,25 +55,12 @@
   margin: 2%;
 }
 
-
-p.question {
-    width: 70%;
-    line-height: 40px;
-    font-family: 'Open Sans', sans-serif;
-    font-style: italic;
-    font-size: 2.2em;
-    margin-left: 3%;
-    padding-bottom: 1.5%;
-    padding-top: 2.5%;
-    /*color: #75a3d1;*/
-    color: #ffd452;
-}
-
 .columns {
   height: 80%;
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
+  padding-top: 5%;
 }
 
 .box .left-col {
@@ -90,14 +77,13 @@ p.question {
   float: left;
   margin-left: 2.3%;
   background-color: transparent;
-  padding-top: 8%;
+  padding-top: 7%;
 }
 
 .center-col div {
-  height: 100px;
-  width: 180px;
+  width: 74%;
   margin: 0 auto;
-  margin-top: 2%;
+  margin-top: 10%;
 }
 
 
