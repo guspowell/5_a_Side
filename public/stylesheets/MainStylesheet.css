@@ -51,7 +51,7 @@
 .box {
   width: 96%;
   height: 96%;
-  background-color: #333333;
+  /*background-color: #333333;*/
   margin: 2%;
 }
 
@@ -76,16 +76,47 @@ p.question {
   margin-right: 5%;
 }
 
-.box div {
+.box .left-col {
   width: 30%;
   height: 100%;
   float: left;
   margin-left: 2.3%;
-  background-color: #e05151;
+  background-color: rgba(0,0,0,0.6)
 }
 
 .box .center-col {
+  width: 30%;
+  height: 100%;
+  float: left;
+  margin-left: 2.3%;
   background-color: transparent;
+  padding-top: 6%;
+}
+
+.center-col div {
+  height: 13%;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.available-button {
+  background-color: #75a3d1;
+}
+
+.generate-button {
+  background-color: #e05151;
+}
+
+.reset-button {
+  background-color: #d9411e;
+}
+
+.box .right-col {
+  width: 30%;
+  height: 100%;
+  float: left;
+  margin-left: 2.3%;
 }
 
 .right-col .team1 {
@@ -93,7 +124,8 @@ p.question {
   height: 47%;
   border: 1px solid black;
   margin-left: 0;
-  margin-bottom: 6%;
+  margin-bottom: 7.7%;
+  background-color: rgba(0,0,0,0.6)
 }
 
 .right-col .team2 {
@@ -101,6 +133,7 @@ p.question {
   height: 47%;
   border: 1px solid black;
   margin-left: 0;
+  background-color: rgba(0,0,0,0.6)
 }
 
 .footer {
