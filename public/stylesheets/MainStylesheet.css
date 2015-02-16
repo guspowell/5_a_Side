@@ -90,26 +90,78 @@ p.question {
   float: left;
   margin-left: 2.3%;
   background-color: transparent;
-  padding-top: 6%;
+  padding-top: 8%;
 }
 
 .center-col div {
-  height: 13%;
-  width: 40%;
+  height: 100px;
+  width: 180px;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
-.available-button {
-  background-color: #75a3d1;
+
+/*Main button class
+==========================*/
+.ph-button {
+
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;
+    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    padding: 19px 39px 18px;
+    font-size: 18px;
+
+}
+/*Green
+==========================*/
+.ph-btn-green {
+
+    border-color: #3AC162;
+    background-color: #5FCF80;
+
+}
+.ph-btn-green:hover, .ph-btn-green:focus, .ph-btn-green:active {
+    background-color: #4BC970;
+    border-color: #3AC162;
 }
 
-.generate-button {
-  background-color: #e05151;
+/*Blue
+==========================*/
+.ph-btn-blue {
+
+    border-color: #326E99;
+    background-color: #3F8ABF;
 }
 
-.reset-button {
-  background-color: #d9411e;
+.ph-btn-blue:hover, .ph-btn-blue:focus, .ph-btn-blue:active {
+    background-color: #397CAC;
+    border-color: #326E99;
+}
+
+/*Red
+==========================*/
+.ph-btn-red {
+
+    background-color: #ED5A5A !important;
+    border-color: #EA4343 !important;
+
+}
+.ph-btn-red:hover, .ph-btn-red:focus, .ph-btn-red:active {
+    background: none repeat scroll 0 0 #EB4848 !important;
+    border-color: #E83131 !important;
 }
 
 .box .right-col {
