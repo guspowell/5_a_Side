@@ -6,6 +6,7 @@
     <a href=#>ABOUT</a>
     <a href=#>RULES</a>
     <a href=#>NOTIFICATIONS</a>
+    <a href='/'>HOME</a>
   </div>
 </section>
 
@@ -23,31 +24,54 @@
 <section class='container'>
   <div class='box'>
     <section class="columns">
-      <div class='left-col'></div>
+      <div class='left-col'>
+        <ul>
+        <% @app.available_players.each do |player| %>
+          <li><%= player %> </li>
+        <% end %>
+        </ul>
+      </div>
+
       <div class='center-col'>
 
         <div class='available-button'>
-          <div class="ph-float">
-            <a href='#' class='ph-button ph-btn-blue'>Available</a>
-          </div>
+          <form action='/playing' method='post'>
+            <input type='submit' name='yes' value='AVAILABLE'>
+          </form>
         </div>
 
         <div class='generate-button'>
-          <div class="ph-float">
-            <a href='#' class='ph-button ph-btn-green'>Generate</a>
-          </div>
+          <form action='/generate' method='post'>
+              <input type='submit' name='generate' value='GENERATE'>
+          </form>
         </div>
 
         <div class='reset-button'>
-          <div class="ph-float">
-            <a href='#' class='ph-button ph-btn-red'>Reset Teams</a>
-          </div>
+          <form action='/reset' method='post'>
+            <input type='submit' name='reset' value='RESET'>
+          </form>
         </div>
 
       </div>
+
       <div class='right-col'>
-        <div class='team1'></div>
-        <div class='team2'></div>
+
+        <div class='team1'>
+          <ul>
+            <% @team1.each do |player| %>
+              <li><%= player %></li>
+            <% end %>
+          </ul>
+        </div>
+
+        <div class='team2'>
+          <ul>
+            <% @team2.each do |player| %>
+              <li><%= player %></li>
+            <% end %>
+          </ul>
+        </div>
+
       </div>
     </section>
   </div>
@@ -61,7 +85,6 @@
 
 <!-- <section class='play_or_not'>
   <form action='/playing' method='post'>
-    <h2>Welcome <%= current_player.username %>, would you like to play this week?</h2>
     <div class='available-button'>
       <input type='submit' name='yes' value='AVAILABLE'>
     </div>

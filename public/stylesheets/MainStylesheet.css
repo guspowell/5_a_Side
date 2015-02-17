@@ -68,7 +68,22 @@
   height: 100%;
   float: left;
   margin-left: 2.3%;
-  background-color: rgba(0,0,0,0.6)
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 1%;
+}
+
+.left-col ul {
+  margin: 1% 5% 0 5%;
+  font-size: 1.3em;
+
+}
+
+.left-col li {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  background-color: #1fda9a;
+  margin-top: 1%;
 }
 
 .box .center-col {
@@ -86,6 +101,7 @@
   margin-top: 10%;
 }
 
+<<<<<<< HEAD
 
 /*Main button class
 ==========================*/
@@ -148,6 +164,64 @@
 .ph-btn-red:hover, .ph-btn-red:focus, .ph-btn-red:active {
     background: none repeat scroll 0 0 #EB4848 !important;
     border-color: #E83131 !important;
+=======
+.available-button {
+  background-color: #1fda9a;
+  height: 13%;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.available-button input[type=submit] {
+  background-color: transparent;
+  height: 13%;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1em;
+  padding-top: 5%;
+  color: white;
+}
+
+.generate-button {
+  background-color: #00CCFF;
+}
+
+.generate-button input[type=submit] {
+  background-color: transparent;
+  height: 13%;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1em;
+  padding-top: 5%;
+  color: white;
+}
+
+.reset-button {
+  background-color: #ee4b3e;
+}
+
+.reset-button input[type=submit] {
+  background-color: transparent;
+  height: 13%;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1em;
+  padding-top: 5%;
+  color: white;
+>>>>>>> 5b6751b
 }
 
 .box .right-col {
@@ -163,7 +237,36 @@
   border: 1px solid black;
   margin-left: 0;
   margin-bottom: 7.7%;
-  background-color: rgba(0,0,0,0.6)
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 2%;
+}
+
+.team2 ul {
+  margin: 1% 5% 0 5%;
+  font-size: 1.3em;
+
+}
+
+.team2 li {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  background-color: #ee4b3e;
+  margin-top: 1%;
+}
+
+.team1 ul {
+  margin: 1% 5% 0 5%;
+  font-size: 1.3em;
+
+}
+
+.team1 li {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  background-color: #00CCFF;
+  margin-top: 1%;
 }
 
 .right-col .team2 {
@@ -171,7 +274,8 @@
   height: 47%;
   border: 1px solid black;
   margin-left: 0;
-  background-color: rgba(0,0,0,0.6)
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 2%;
 }
 
 .footer {
