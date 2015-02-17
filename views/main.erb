@@ -34,6 +34,12 @@
 
       <div class='center-col'>
 
+        <section class='main-errors'>
+          <% if flash[:notice] %>
+            <p><%= flash[:notice] %></p>
+          <% end %>
+        </section>
+
         <div class='available-button'>
           <form action='/playing' method='post'>
             <input type='submit' name='yes' value='AVAILABLE'>

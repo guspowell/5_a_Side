@@ -89,13 +89,22 @@
   float: left;
   margin-left: 2.3%;
   background-color: transparent;
-  padding-top: 7%;
+  padding-top: 0%;
 }
 
 .center-col div {
   width: 74%;
   margin: 0 auto;
   margin-top: 11%;
+}
+
+.main-errors {
+  height: 13%;
+  width: 40%;
+  margin: 0 auto;
+  width: 74%;
+  font-size: 1.2em;
+  text-align: center;
 }
 
 .available-button {
@@ -113,7 +122,7 @@
   border: none;
   font-size: 1em;
   color: white;
-  margin-top: 10%;
+  margin-top: 9%;
 }
 
 .generate-button {
@@ -131,7 +140,7 @@
   border: none;
   font-size: 1em;
   color: white;
-  margin-top: 10%;
+  margin-top: 9%;
 }
 
 .reset-button {
@@ -149,7 +158,7 @@
   border: none;
   font-size: 1em;
   color: white;
-  margin-top: 10%;
+  margin-top: 9%;
 
 }
 
