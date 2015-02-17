@@ -51,7 +51,6 @@
 .box {
   width: 96%;
   height: 96%;
-  /*background-color: #333333;*/
   margin: 2%;
 }
 
@@ -101,70 +100,6 @@
   margin-top: 10%;
 }
 
-<<<<<<< HEAD
-
-/*Main button class
-==========================*/
-.ph-button {
-
-    border-style: solid;
-    border-width: 0px 0px 3px;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    color: #FFFFFF;
-    border-radius: 6px;
-    cursor: pointer;
-    display: block;
-    font-style: normal;
-    overflow: hidden;
-    text-align: center;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    transition: all 200ms ease-in-out 0s;
-    white-space: nowrap;
-    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    padding: 19px 39px 18px;
-    font-size: 18px;
-
-}
-/*Green
-==========================*/
-.ph-btn-green {
-
-    border-color: #3AC162;
-    background-color: #5FCF80;
-
-}
-.ph-btn-green:hover, .ph-btn-green:focus, .ph-btn-green:active {
-    background-color: #4BC970;
-    border-color: #3AC162;
-}
-
-/*Blue
-==========================*/
-.ph-btn-blue {
-
-    border-color: #326E99;
-    background-color: #3F8ABF;
-}
-
-.ph-btn-blue:hover, .ph-btn-blue:focus, .ph-btn-blue:active {
-    background-color: #397CAC;
-    border-color: #326E99;
-}
-
-/*Red
-==========================*/
-.ph-btn-red {
-
-    background-color: #ED5A5A !important;
-    border-color: #EA4343 !important;
-
-}
-.ph-btn-red:hover, .ph-btn-red:focus, .ph-btn-red:active {
-    background: none repeat scroll 0 0 #EB4848 !important;
-    border-color: #E83131 !important;
-=======
 .available-button {
   background-color: #1fda9a;
   height: 13%;
@@ -221,7 +156,6 @@
   font-size: 1em;
   padding-top: 5%;
   color: white;
->>>>>>> 5b6751b
 }
 
 .box .right-col {
