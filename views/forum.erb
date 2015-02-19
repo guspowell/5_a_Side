@@ -3,8 +3,8 @@
   <input type='submit' value='post'>
 </form>
 
-<% if @post %>
-<p style='color: white'>
-<%= @post %>
-</p>
+<% @posts.each do |post| %>
+  <p style='color: white'>
+  <%= post.content %>
+  </p>
 <% end %>

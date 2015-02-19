@@ -10,6 +10,7 @@ class FiveASide < Sinatra::Base
   DataMapper.setup(:default, "postgres://localhost/five_a_side_#{env}")
 
   require './lib/models/player.rb'
+  require './lib/models/post.rb'
 
   DataMapper.finalize
 
@@ -103,11 +104,13 @@ class FiveASide < Sinatra::Base
   end
 
   get '/forum' do
+    @posts = Post.all
     erb :forum
+
   end
 
   post '/forum-post' do
-    @post = params[:post]
+    @post = Post.create(content: params[:post], created_at: Time.now
     erb :forum
   end
 
