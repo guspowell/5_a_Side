@@ -9,6 +9,12 @@ feature 'Posting to the forum' do
   scenario 'A user should be able to post to the forum' do
     sign_up
     click_link 'FORUM'
+    expect(page).to have_selector('.forum-post')
+  end
+
+  scenario 'A user is able to make a post' do
+    sign_up
+    click_link 'FORUM'
     fill_in :post, with: 'what time are we playing?'
     expect(page).to have_content 'What time are we playing?'
   end

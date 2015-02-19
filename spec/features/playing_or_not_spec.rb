@@ -21,7 +21,6 @@ feature 'Player chooses to play or not' do
     visit '/'
     click_button 'RESET'
     adding_different_players(14)
-    save_and_open_page
     expect(page).to have_content("Sorry, the game is full")
   end
 

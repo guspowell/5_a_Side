@@ -102,6 +102,10 @@ class FiveASide < Sinatra::Base
     redirect to('/main')
   end
 
+  get '/forum' do
+    erb :forum
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

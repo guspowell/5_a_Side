@@ -13,10 +13,5 @@ feature 'Generating two teams' do
     expect(page).to have_selector('.team1 li', count: 3)
     expect(page).to have_selector('.team2 li', count: 3)
   end
-
-  # scenario 'will empty the available players list' do
-  #   adding_different_players(6)
-  #   click_button 'GENERATE'
-  #   expect(page).to have_selector('.available-players li', count: 0)
-  # end
+  
 end
