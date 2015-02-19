@@ -29,15 +29,14 @@ module Helpers
 
   def sign_up(username = 'ronaldo')
     visit '/'
-    click_link 'Click here to register'
     fill_in :username_register, :with => username
-    click_button 'Register'
+    click_button 'REGISTER'
   end
 
   def login(username)
     visit '/'
     fill_in :username_login, :with => username
-    click_button 'Login'
+    click_button 'LOGIN'
   end
 
 end

@@ -39,6 +39,14 @@ body {
   height: 45%;
 }
 
+.header .welcome {
+  height: 30%;
+  padding-top: 2.5%;
+  margin-right: 2%;
+  height: 100%;
+  width: 20%;
+}
+
 .header .menu {
   height: 30%;
   padding-top: 2.5%;
@@ -121,6 +129,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   border-top: 0.2em solid white;
+}
+
+.reset-teams-button {
+  display: none;
 }
 
 

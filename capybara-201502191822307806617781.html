@@ -1,4 +1,15 @@
-<section class='header'>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/reset.css"/>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/indexStylesheet.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700italic' rel='stylesheet' type='text/css'>
+    <title>5-a-Side</title>
+  </head>
+
+  <body>
+
+    <section class='header'>
   <div class="makers-logo">
     <img src="images/MA.svg">
   </div>
@@ -12,7 +23,7 @@
 
 <!--
 <section class='play-or-not'>
-  <h2>Hi <%= current_player.username %>, Make yourself available to play this week</h2>
+  <h2>Hi 13 rooney, Make yourself available to play this week</h2>
   <div class='available-button'
     <form class='available' action='/playing' method='post'>
       <input type='submit' name='yes' value='AVAILABLE'>
@@ -26,25 +37,47 @@
     <section class="columns">
 
       <div class='welcome'>
-        <% if current_player %>
-          Welcome <%= current_player.username %>
-        <% end %>
+        
+          Welcome 13 rooney
+        
       </div>
 
       <div class='left-col'>
         <ul>
-        <% @app.available_players.each do |player| %>
-          <li><%= player %> </li>
-        <% end %>
+        
+          <li>0 rooney </li>
+        
+          <li>1 rooney </li>
+        
+          <li>2 rooney </li>
+        
+          <li>3 rooney </li>
+        
+          <li>4 rooney </li>
+        
+          <li>5 rooney </li>
+        
+          <li>6 rooney </li>
+        
+          <li>7 rooney </li>
+        
+          <li>8 rooney </li>
+        
+          <li>9 rooney </li>
+        
+          <li>10 rooney </li>
+        
+          <li>11 rooney </li>
+        
         </ul>
       </div>
 
       <div class='center-col'>
 
         <section class='main-errors'>
-          <% if flash[:notice] %>
-            <p><%= flash[:notice] %></p>
-          <% end %>
+          
+            <p>Sorry, the game is full</p>
+          
         </section>
 
         <div class='available-button'>
@@ -71,17 +104,13 @@
 
         <div class='team1'>
           <ul>
-            <% @team1.each do |player| %>
-              <li><%= player %></li>
-            <% end %>
+            
           </ul>
         </div>
 
         <div class='team2'>
           <ul>
-            <% @team2.each do |player| %>
-              <li><%= player %></li>
-            <% end %>
+            
           </ul>
         </div>
 
@@ -105,16 +134,38 @@
 </section>
 
 <section class="flash-error">
-  <% if flash[:notice] %>
-    <p><%= flash[:notice] %></p>
-  <% end %>
+  
+    <p>Sorry, the game is full</p>
+  
 </section>
 
 <section class="available-players">
   <ul>
-  <% @app.available_players.each do |player| %>
-    <li><%= player %> </li>
-  <% end %>
+  
+    <li>0 rooney </li>
+  
+    <li>1 rooney </li>
+  
+    <li>2 rooney </li>
+  
+    <li>3 rooney </li>
+  
+    <li>4 rooney </li>
+  
+    <li>5 rooney </li>
+  
+    <li>6 rooney </li>
+  
+    <li>7 rooney </li>
+  
+    <li>8 rooney </li>
+  
+    <li>9 rooney </li>
+  
+    <li>10 rooney </li>
+  
+    <li>11 rooney </li>
+  
   </ul>
 </section>
 
@@ -128,16 +179,16 @@
 
 <section class="team1-box">
   <ul>
-    <% @team1.each do |player| %>
-      <li><%= player %></li>
-    <% end %>
+    
   </ul>
 </section>
 
 <section class="team2-box">
   <ul>
-    <% @team2.each do |player| %>
-      <li><%= player %></li>
-    <% end %>
+    
   </ul>
 </section> -->
+
+
+  </body>
+</html>

@@ -7,7 +7,7 @@ feature "Player wants to register" do
 
   scenario "visiting the website" do
     visit '/'
-    expect(page).to have_content("Click here to register")
+    expect(page).to have_selector('.login-button')
   end
 
   scenario "being a new player and registering" do
