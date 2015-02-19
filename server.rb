@@ -110,8 +110,9 @@ class FiveASide < Sinatra::Base
   end
 
   post '/forum-post' do
-    @post = Post.create(content: params[:post], created_at: Time.now
-    erb :forum
+    content = params[:post]
+    @post = Post.create(content: content, player_id: current_player.id, created_at: Time.now)
+    redirect to('/forum')
   end
 
   # start the server if ruby file executed directly
