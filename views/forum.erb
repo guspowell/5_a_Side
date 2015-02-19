@@ -1,4 +1,10 @@
-<form action='/forum' method='POST' class='forum-post'>
+<form action='/forum-post' method='POST' class='forum-post'>
   <input type='text' name='post'>
   <input type='submit' value='post'>
 </form>
+
+<% if @post %>
+<p style='color: white'>
+<%= @post %>
+</p>
+<% end %>

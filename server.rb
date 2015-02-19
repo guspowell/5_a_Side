@@ -106,6 +106,11 @@ class FiveASide < Sinatra::Base
     erb :forum
   end
 
+  post '/forum-post' do
+    @post = params[:post]
+    erb :forum
+  end
+
   # start the server if ruby file executed directly
   run! if app_file == $0
 end

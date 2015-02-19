@@ -15,8 +15,21 @@ feature 'Posting to the forum' do
   scenario 'A user is able to make a post' do
     sign_up
     click_link 'FORUM'
-    fill_in :post, with: 'what time are we playing?'
+    fill_in :post, with: 'What time are we playing?'
+    click_button 'post'
     expect(page).to have_content 'What time are we playing?'
+  end
+
+  scenario 'You should be able to post multiple posts' do
+    sign_up
+    click_link 'FORUM'
+    fill_in :post, with: 'What time are we playing?'
+    click_button 'post'
+    fill_in :post, with: 'Hello'
+    click_button 'post'
+    expect(page).to have_content 'What time are we playing?'
+    expect(page).to have_content 'Hello'
+
   end
 
 end
