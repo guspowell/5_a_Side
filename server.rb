@@ -106,7 +106,6 @@ class FiveASide < Sinatra::Base
   get '/forum' do
     @posts = Post.all
     erb :forum
-
   end
 
   post '/forum-post' do

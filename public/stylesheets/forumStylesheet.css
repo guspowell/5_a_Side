@@ -1,0 +1,44 @@
+.submitting-post {
+  text-align: center;
+  height: 20%;
+  margin-top: 5%;
+}
+
+.post-box {
+  height: 50px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.all-posts {
+  height: 80%;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+
+li {
+  height: 20%;
+  margin-top: 1%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  background-color: #00CCFF;
+}
+
+#message {
+  margin-left: 5%;
+  width: 80%;
+}
+
+#username {
+  padding-left: 3%;
+  float: left;
+  width: 15%;
+}
+
+#time {
+  float: right;
+  width: 10%;
+  font-size: 0.5em;
+}

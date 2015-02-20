@@ -18,6 +18,7 @@ feature 'Posting to the forum' do
     fill_in :post, with: 'What time are we playing?'
     click_button 'post'
     expect(page).to have_content 'What time are we playing?'
+    p Post.first.player.username.inspect
   end
 
   scenario 'You should be able to post multiple posts' do
