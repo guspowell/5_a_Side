@@ -11,34 +11,40 @@
 }
 
 .all-posts {
-  height: 80%;
-  width: 80%;
-  margin: 0 auto;
   font-size: 1.5em;
 }
 
 
 li {
-  height: 20%;
-  margin-top: 1%;
-  padding-bottom: 1%;
-  padding-top: 1%;
+  height: 70px;
+  width: 100%;
   background-color: #00CCFF;
+  border: 1px solid black;
 }
 
 #message {
-  margin-left: 5%;
-  width: 80%;
+  margin-left: 0;
+  width: 75%;
+  padding: 0;
+  margin: 0;
+  background-color: orange;
+  height: 100%;
+  display: inline-block;
+
 }
 
 #username {
-  padding-left: 3%;
+  padding-left: 0;
   float: left;
-  width: 15%;
+  width: 180px;
+  background-color: red;
+  height: 100%;
 }
 
 #time {
-  float: right;
-  width: 10%;
+  width: 5%;
   font-size: 0.5em;
+  display: inline-block;
+  height: 100%;
+  background-color: green;
 }
