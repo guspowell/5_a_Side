@@ -1,143 +1,83 @@
 <section class='header'>
-  <div class="makers-logo">
+  <section class="makers-logo">
     <img src="images/MA.svg">
-  </div>
-  <div class='menu'>
+  </section>
+  <section class='menu'>
     <a href=#>ABOUT</a>
     <a href=#>RULES</a>
     <a href='/forum'>FORUM</a>
     <a href='/'>HOME</a>
-  </div>
+  </section>
 </section>
 
-<!--
-<section class='play-or-not'>
-  <h2>Hi <%= current_player.username %>, Make yourself available to play this week</h2>
-  <div class='available-button'
-    <form class='available' action='/playing' method='post'>
-      <input type='submit' name='yes' value='AVAILABLE'>
-    </form>
-  </div>
-</section> -->
-
-
 <section class='container'>
-  <div class='box'>
+  <section class='box'>
     <section class="columns">
 
-      <div class='welcome'>
+      <section class='welcome'>
         <% if current_player %>
           Welcome <%= current_player.username %>
         <% end %>
-      </div>
+      </section>
 
-      <div class='left-col'>
+      <section class='left-col'>
         <ul>
-        <% @app.available_players.each do |player| %>
-          <li><%= player %> </li>
-        <% end %>
+          <% @app.available_players.each do |player| %>
+            <li><%= player %> </li>
+          <% end %>
         </ul>
-      </div>
+      </section>
 
-      <div class='center-col'>
-
+      <section class='center-col'>
+      
         <section class='main-errors'>
           <% if flash[:notice] %>
             <p><%= flash[:notice] %></p>
           <% end %>
         </section>
 
-        <div class='available-button'>
+        <section class='available-button'>
           <form action='/playing' method='post'>
             <input type='submit' name='yes' value='AVAILABLE'>
           </form>
-        </div>
+        </section>
 
-        <div class='generate-button'>
+        <section class='generate-button'>
           <form action='/generate' method='post'>
               <input type='submit' name='generate' value='GENERATE'>
           </form>
-        </div>
+        </section>
 
-        <div class='reset-button'>
+        <section class='reset-button'>
           <form action='/reset' method='post'>
             <input type='submit' name='RESET' value='RESET'>
           </form>
-        </div>
+        </section>
 
-      </div>
+      </section>
 
-      <div class='right-col'>
+      <section class='right-col'>
 
-        <div class='team1'>
+        <section class='team1'>
           <ul>
             <% @team1.each do |player| %>
               <li><%= player %></li>
             <% end %>
           </ul>
-        </div>
+        </section>
 
-        <div class='team2'>
+        <section class='team2'>
           <ul>
             <% @team2.each do |player| %>
               <li><%= player %></li>
             <% end %>
           </ul>
-        </div>
+        </section>
 
-      </div>
+      </section>
     </section>
-  </div>
+  </section>
 </section>
 
 <section class="footer">
 </section>
-
-
-
-
-<!-- <section class='play_or_not'>
-  <form action='/playing' method='post'>
-    <div class='available-button'>
-      <input type='submit' name='yes' value='AVAILABLE'>
-    </div>
-  </form>
-</section>
-
-<section class="flash-error">
-  <% if flash[:notice] %>
-    <p><%= flash[:notice] %></p>
-  <% end %>
-</section>
-
-<section class="available-players">
-  <ul>
-  <% @app.available_players.each do |player| %>
-    <li><%= player %> </li>
-  <% end %>
-  </ul>
-</section>
-
-
-
-<div class='generate-button'>
-  <form action='/generate' method='post'>
-      <input type='submit' name='generate' value='GENERATE'>
-  </form>
-</div>
-
-<section class="team1-box">
-  <ul>
-    <% @team1.each do |player| %>
-      <li><%= player %></li>
-    <% end %>
-  </ul>
-</section>
-
-<section class="team2-box">
-  <ul>
-    <% @team2.each do |player| %>
-      <li><%= player %></li>
-    <% end %>
-  </ul>
-</section> -->
