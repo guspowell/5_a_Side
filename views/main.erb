@@ -1,19 +1,21 @@
 <section class='header'>
+
   <section class="makers-logo">
     <img src="images/MA.svg">
   </section>
+
   <section class='menu'>
     <a href=#>ABOUT</a>
     <a href=#>RULES</a>
     <a href='/forum'>FORUM</a>
     <a href='/'>HOME</a>
   </section>
+
 </section>
 
 <section class='container'>
   <section class='box'>
     <section class="columns">
-
       <section class='welcome'>
         <% if current_player %>
           Welcome <%= current_player.username %>
@@ -29,7 +31,6 @@
       </section>
 
       <section class='center-col'>
-      
         <section class='main-errors'>
           <% if flash[:notice] %>
             <p><%= flash[:notice] %></p>
@@ -57,7 +58,6 @@
       </section>
 
       <section class='right-col'>
-
         <section class='team1'>
           <ul>
             <% @team1.each do |player| %>
@@ -73,7 +73,7 @@
             <% end %>
           </ul>
         </section>
-
+        
       </section>
     </section>
   </section>
