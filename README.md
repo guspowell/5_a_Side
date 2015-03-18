@@ -3,7 +3,7 @@
 Want to play a 5 a side game? Don't you want to forget who said "I'm in!" and don't know how to shuffle the teams?
 This program will help you organise your weekly 5v5 game by keeping track of the players, teams and results!
 
-[##Live Version](https://makers-five-a-side.herokuapp.com/)
+[Live Version](https://makers-five-a-side.herokuapp.com/)
 
 ![ball](/soccer.png)
 
