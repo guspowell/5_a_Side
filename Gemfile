@@ -16,6 +16,6 @@ source 'https://rubygems.org'
     gem 'launchy'
     gem 'shotgun'
     gem 'preek'
-    gem 'codeclimate-test-reporter'
+    gem 'codeclimate-test-reporter', require: nil
 
   end

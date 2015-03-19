@@ -1,43 +1,44 @@
 <section class='header'>
-  <div class="makers-logo">
+  <section class="makers-logo">
     <img src="images/MA.svg">
-  </div>
-  <div class='menu'>
+  </section>
+  <section class='menu'>
     <a href=#>ABOUT</a>
     <a href=#>RULES</a>
     <a href=#>NOTIFICATIONS</a>
     <a href='/'>HOME</a>
-  </div>
+  </section>
 </section>
 
 <section class='container'>
-  <div class='form'>
-    <div class='ma-5-aside'>
+  <section class='form'>
+    <section class='ma-5-aside'>
       <img src="images/MA5aside.svg">
-    </div>
-    <div class='details'>
+    </section>
+
+    <section class='details'>
       <form class='login-form' action="/sessions" method="post">
         <input class='input-field' type='text' name='username_login'>
-        <!-- <input class='button-img' type="image" src="images/login_button.svg" name='submit-login'> -->
         <input class ='login-button' type='submit' value='LOGIN' name='submit-login'>
       </form>
       <form class='login-form' action="/registering" method="post">
         <input class='input-field' type='text' name='username_register'>
-        <!-- <input class='button-img' type='image' src="images/joinbutton.svg" name='submit-register' value='Register'> -->
         <input class ='login-button' type='submit' value='REGISTER' name='submit-login'>
       </form>
-      <div class='errors'>
+
+      <section class='errors'>
         <% if flash[:notice] %>
           <p><%= flash[:notice] %></p>
         <% end %>
-      </div>
-    </div>
-  </div>
+      </section>
+      
+    </section>
+  </section>
 
   <form action='/reset_teams' method='post'>
-    <div class='reset-teams-button'>
+    <section class='reset-teams-button'>
       <input type='image' name='reset' value='RESET TEAMS'>
-    </div>
+    </section>
   </form>
 
 </section>
@@ -45,33 +46,3 @@
 <section class="footer">
 
 </section>
-
-
-
-<!-- <section class="box">
-
-  <section class="sign-in">
-    <section class="sign-in-elements">
-      <form action="/sessions" method="post">
-        <input type='text' name='username_login'>
-        <input type="image" src="images/login_button.svg" name='submit-login'>
-      </form>
-  </section>
-    <a href= "/new_user" class="register-link">Click here to register</a>
-  </section>
-
-  <form action='/reset_teams' method='post'>
-    <div class='reset-teams-button'>
-      <input type='image' name='reset' value='RESET TEAMS'>
-    </div>
-  </form>
-
-</section>
-
-<section class="flash-error">
-
-  <% if flash[:notice] %>
-    <p><%= flash[:notice] %></p>
-  <% end %>
-
-</section> -->

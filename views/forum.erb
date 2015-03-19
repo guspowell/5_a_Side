@@ -1,9 +1,9 @@
-<div class='submitting-post'>
+<section class='submitting-post'>
   <form action='/forum-post' method='POST' class='forum-post'>
     <input class='post-box' type='text' name='post'>
     <input type='submit' value='post'>
   </form>
-</div>
+</section>
 
 <td>
   <tr>
@@ -18,12 +18,12 @@
 
 <ul class='all-posts'>
   <% @posts.each do |post| %>
-    <div id="ind-post">
-    <li style='color: white'>
-      <div id="username"><%= post.player.username %></div>
-      <div id="message"><%= post.content %></div>
-      <div id="time"><%= post.created_at.strftime("%b %e, %l:%M %p")%></div>
-    </li>
-    </div>
+    <section id="ind-post">
+      <li style='color: white'>
+        <section id="username"><%= post.player.username %></section>
+        <section id="message"><%= post.content %></section>
+        <section id="time"><%= post.created_at.strftime("%b %e, %l:%M %p")%></section>
+      </li>
+    </section>
   <% end %>
 </ul>

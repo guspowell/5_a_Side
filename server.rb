@@ -7,7 +7,7 @@ class FiveASide < Sinatra::Base
 
   env = ENV['RACK_ENV'] || 'development'
 
-  DataMapper.setup(:default, "postgres://localhost/five_a_side_#{env}")
+  DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/five_a_side_#{env}")
 
   require './lib/models/player.rb'
   require './lib/models/post.rb'
