@@ -12,21 +12,18 @@ This program will help you organise your weekly 5v5 game by keeping track of the
 - [x] Will not generate the same teams twice in a row;
 - [x] Allow players to decide whether they want to play or not.
 
-Technologies Used
---
-###Front-end
+##Technologies Used
+- Ruby
 - HTML & CSS
-
-###Server
 - Sinatra
-
-###Database
 - PostgreSQL
 
 ##ToDo
 
 - [ ] Admin account to reset teams
 - [ ] Players who join after the teams are generated have to be balanced within the teams
+- [ ] Style the forum page
+- Add content to 'About' and 'Rules' pages
 
 Collaborators
 --
