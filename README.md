@@ -1,5 +1,4 @@
 #5 A Side
-===
 Want to play a 5 a side game? Don't you want to forget who said "I'm in!" and don't know how to shuffle the teams?
 This program will help you organise your weekly 5v5 game by keeping track of the players, teams and results!
 
@@ -8,7 +7,6 @@ This program will help you organise your weekly 5v5 game by keeping track of the
 ![ball](/soccer.png)
 
 ##Job list
---
 - [x] Store players information;
 - [x] Randomly generate teams;
 - [x] Will not generate the same teams twice in a row;
